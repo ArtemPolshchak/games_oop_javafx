@@ -33,13 +33,13 @@ public class WinTest {
     }
 
     @Test
-    public void whenNotWin() {
+    public void whenNotWinV() {
         int[][] board = {
+                {0, 0, 1, 0, 0},
+                {0, 1, 1, 0, 0},
                 {0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0},
-                {1, 1, 1, 1, 1},
-                {0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0},
+                {0, 0, 1, 0, 0},
+                {0, 0, 1, 0, 0},
         };
         assertThat(Win.check(board), is(false));
     }
