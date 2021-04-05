@@ -20,6 +20,19 @@ public class BishopBlack implements Figure {
         throw new IllegalStateException(
                 String.format("Could not way by diagonal from %s to %s", position, dest)
         );
+
+       // int size = 8;
+        //Cell[] steps = new Cell[size];
+       // int deltaX =  ;
+       // int deltaY =  ;
+
+
+       // for (int index = 0; index < size; index++) {
+            //int x = index + deltaX;
+            //int y = index + deltaY;
+            //steps[index] = Cell.findBy(x, y);
+        //}
+       // return steps;
     }
 
     public boolean isDiagonal(Cell source, Cell dest) {
