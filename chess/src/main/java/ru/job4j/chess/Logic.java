@@ -16,12 +16,23 @@ public final class Logic {
             throws FigureNotFoundException, ImpossibleMoveException, OccupiedCellException {
         int index = findBy(source);
         Cell[] steps = figures[index].way(dest);
-        free(steps);
+            free(steps);
         figures[index] = figures[index].copy(dest);
     }
 
-    private boolean free(Cell[] steps) throws OccupiedCellException {
+    private boolean free(Cell[] steps) throws OccupiedCellException, FigureNotFoundException {
+        //Метод проходится по массиву figures  и проверяет, что фигуры не занимают элементы из массива steps
+        for (Figure figure : figures) {
+            for (int j = 0; j < steps.length; j++) {
+                if (figure.position() != null) {
+                    if (figure.position().equals(steps[j])) {
+                        throw new OccupiedCellException("Could not way by the way");
+                    }
+                }
+            }
+        }
         return true;
+
     }
 
     public void clean() {
@@ -36,6 +47,6 @@ public final class Logic {
                 return index;
             }
         }
-        throw new FigureNotFoundException();
+        throw new FigureNotFoundException("Cant find Figure");
     }
 }
