@@ -29,7 +29,6 @@ public class BishopBlackTest {
         throw new IllegalAccessException(String.format("Could not way by diagonal from %s to %s", Cell.A1, Cell.A4));
     }
 
-
     @Test
     public void isNotDiagonal() {
         BishopBlack bp = new BishopBlack(Cell.C8);

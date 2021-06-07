@@ -27,9 +27,6 @@ public class LogicTest {
         logic.add(bishopBlack);
         logic.move(Cell.C3, Cell.C4);
     }
-
-
-
     @Test(expected = FigureNotFoundException.class) //фигуры нет на клетке.
     public void whenFigureNotFoundException() throws ImpossibleMoveException, OccupiedCellException, FigureNotFoundException {
        BishopBlack bishopBlack = new BishopBlack(Cell.E6);

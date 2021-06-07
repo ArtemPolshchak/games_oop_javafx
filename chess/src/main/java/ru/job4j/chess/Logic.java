@@ -32,7 +32,6 @@ public final class Logic {
             }
         }
         return true;
-
     }
 
     public void clean() {

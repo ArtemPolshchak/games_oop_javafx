@@ -32,7 +32,6 @@ public class BishopBlack implements Figure {
         return this.position;
     }
 
-
     @Override
     //Этот метод возвращает массив с клетками, которые должна пройти фигура от клетки position до клетки dest
     public Cell[] way(Cell dest) throws ImpossibleMoveException {
