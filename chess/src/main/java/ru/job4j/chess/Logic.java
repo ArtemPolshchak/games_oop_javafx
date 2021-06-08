@@ -23,11 +23,9 @@ public final class Logic {
     private boolean free(Cell[] steps) throws OccupiedCellException, FigureNotFoundException {
         //Метод проходится по массиву figures  и проверяет, что фигуры не занимают элементы из массива steps
         for (Figure figure : figures) {
-            for (int j = 0; j < steps.length; j++) {
-                if (figure.position() != null) {
-                    if (figure.position().equals(steps[j])) {
+            for (Cell step : steps) {
+                if (figure.position() != null && figure.position().equals(step)) {
                         throw new OccupiedCellException("Could not way by the way");
-                    }
                 }
             }
         }
